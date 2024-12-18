@@ -1,0 +1,431 @@
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+html {
+  -ms-text-size-adjust: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 1 */
+  box-sizing: border-box; /* 1 */
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+} /* 3 */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+mark,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: "Noto Sans TC", sans-serif;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  color: currentColor;
+}
+
+body {
+  font: var(--body-fz) / var(--body-lh) var(--font-stack);
+  color: var(--text-default);
+  background-color: #000;
+}
+
+html {
+  --font-stack: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --body-fz: 1em;
+  --body-lh: 1.5;
+  --body-bg: var(--wine);
+
+  --text-default: #fff;
+
+  --wrapper: 60em;
+  --wrapper-offset: 0.5fr;
+  @media (min-width: 40rem) {
+    --wrapper-offset: 2em;
+  }
+  @media (min-width: 50rem) {
+    --wrapper-offset: 4em;
+  }
+
+  --wine: hsl(222, 33%, 17%);
+  --winery: hsl(222, 33%, 70%);
+  --color-primary: #312;
+  --color-primary-hs: 328 66%;
+  --color-primary-l: 20%;
+  --color-primary-inside: #fff;
+}
+
+/* header */
+.main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  backdrop-filter: blur(1px);
+  align-items: center;
+  padding: 30px 0;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+}
+.side-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.side-nav ul li a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+.top {
+  background-image: url(./img/top-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 160px 0;
+}
+
+.top-introduce,
+.exp,
+.works-blk {
+  width: 80%;
+  margin: auto;
+}
+.top-introduce > h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 200;
+  font-style: normal;
+  overflow: hidden;
+  font-size: 150px;
+}
+h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.title-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.title-container {
+  flex: 0 0 auto;
+}
+.line-container {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 10px;
+}
+
+/* exp */
+.exp {
+  margin: 0 auto 140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.exp h2 {
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  font-size: 56px;
+  margin-bottom: 80px;
+}
+.works-blk h2 {
+  font-family: "Libre Baskerville", serif;
+  color: #fff;
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+.exp .star {
+  margin-right: 15px;
+  width: 25px;
+  height: 25px;
+}
+.exp ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.exp .exp-year {
+  display: flex;
+  width: 30%;
+  align-items: center;
+}
+.exp .year {
+  margin-right: 20px;
+}
+.exp > img {
+  width: 310px;
+  object-fit: contain;
+}
+.exp-text {
+  width: 70%;
+}
+.exp-img {
+  width: 30%;
+}
+.exp-img img {
+  width: 100%;
+}
+
+/**/
+.works-blk {
+  margin-bottom: 150px;
+}
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 50px;
+}
+.work {
+  width: 48%;
+}
+.work img {
+  transition: 0.5s ease-in-out;
+}
+.work:hover img {
+  transform: scale(1.2);
+}
+
+.work-img {
+  width: 100%;
+  height: 330px;
+  border-radius: 48px;
+  overflow: hidden;
+}
+.work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.work-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.work-title p {
+  font-size: 18px;
+}
+.works-blk .title-box {
+  margin-bottom: 80px;
+}
+
+/*----------------*/
+
+.wrapping {
+  display: grid;
+  width: 84%;
+  margin: auto;
+}
+.wrapping > * {
+  grid-column: main;
+}
+
+.intro {
+  margin-bottom: 3em;
+  font-family: Playfair Display, serif;
+  text-align: center;
+
+  h1 {
+    font-size: 5em;
+  }
+}
+.stack-cards {
+  --stack-cards-gap: 1.5em;
+  margin-bottom: 3em;
+
+  &__item {
+    position: sticky;
+    top: var(--stack-cards-gap);
+    transform-origin: center top;
+
+    & + & {
+      margin-top: 1em;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.086) 0px 1px 8px 0px,
+    rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
+  overflow: hidden;
+  padding: 20px 0 40px;
+
+  &__text {
+    padding: 2em;
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-family: Playfair Display, serif;
+    font-size: 2.4rem;
+  }
+
+  &__image {
+    background-color: var(--winery);
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+  }
+}
+
+.textflow {
+  & > * + * {
+    margin-top: 1.5em;
+  }
+}
+
+.fin {
+  margin-bottom: 4em;
+}
+.card__img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+.stack-cards__item {
+  position: sticky;
+  top: var(--stack-cards-gap);
+  transform-origin: center top;
+}
+.card__text {
+  padding: 0 10%;
+}
+.card__text h2 {
+  font-size: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(0 0 0 / 20%);
+}
+.question {
+  font-family: "Libre Baskerville", serif;
+  font-size: 48px;
+  margin-right: 20px;
+}
+p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.end-text {
+  width: 84%;
+  margin: auto;
+  padding: 250px 0 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.end-text h4 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+body {
+  position: relative;
+}
+.btm-dec {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .exp-text,
+  .exp-img,
+  .work {
+    width: 100%;
+  }
+}
